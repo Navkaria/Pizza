@@ -1,0 +1,420 @@
+//!===============================  START  ===============================//
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap);
+
+body{
+    font-family: 'Ubuntu', sans-serif; //подключение шрифта
+    background-color: #eaeaea;
+}
+body::-webkit-scrollbar {
+    width: 16px;               /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: rgba(240, 239, 239, 0.733);        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #ee252c;    /* цвет плашки */
+    border-radius: 10px;       /* закругления плашки */
+    border: 3px solid #e41b23;  /* padding вокруг плашки */
+  }
+//!===============================  END  ===============================//
+
+//?======================================   ======================================//
+
+//!===============================  WRAPER START  ===============================//
+
+.wrap{
+    width: 100%; //ширина
+    max-width: 1170px; // максимальная ширина
+    margin: 0 auto; //выравнивание по центру
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.prog{
+    text-align: center;
+    &h2, p{
+        font-size: 18px;
+        color: #aaaaaa;
+        font-family: 'Roboto', sans-serif;
+        margin: 0px;
+    }
+}
+
+//!===============================  WRAPER END  ===============================//
+
+//?======================================   ======================================//
+
+//!=============================== NAV START  ===============================//
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 26px;
+    padding-bottom: 40px;
+
+
+.li {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+        
+            a {
+                text-decoration: none;
+                color: #4d4d4d;
+                display: inline-block;
+                transition: all 0.4s ease;
+                position: relative;
+                &:after { 
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    background-color: #ec1919;
+                    width: 0px;
+                    left: 50%;
+                    bottom: -8px;
+                    transform: translateX(-50%);
+                    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+                }
+            
+            &:hover { color: #ec1212; }
+            &:hover::after { width: 100%; }
+            }
+        
+        li{
+            padding-left: 23px;
+            margin-left: 22px;
+            position: relative;
+            &:first-child{
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+
+            &:first-child::before{
+                display: none;
+                font-size: 20px;
+            }
+
+            &::before{
+                content: ' ';
+                display: block;
+                width: 2px;
+                height: 16px;
+                background-color: #494949;
+                position: absolute;
+                left: 0px;
+            }
+        }
+    }
+}
+
+//!=============================== NAV END  ===============================// 
+
+//?======================================   ======================================//
+
+//!=============================== BAN START  ===============================// 
+
+.ban {
+    background-image: url(../img/BG1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    padding-top: 259px;
+    padding-bottom: 286px;
+}
+
+.h1 {
+    font-size: 50px;
+    margin-bottom: 23px;
+}
+
+.p {
+    font-size: 24px;
+    line-height: normal;
+    max-width: 573px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 0.1px;
+    
+}
+
+.read {
+    position: absolute;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    border: 2px solid #ffffff;
+    padding: 16px 32px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+        &:hover{
+            background-color: #ffffff;
+            color: #e41b23;
+            box-shadow: 2px 2px 30px #ffffff;
+        }
+}
+
+.pizza {
+    position: absolute;
+    right: 0px;
+    top: -230px;
+}
+
+
+//!=============================== BAN END  ===============================// 
+
+//?======================================   ======================================//
+
+//!=============================== PAGE START  ===============================// 
+.page{
+    padding-top: 120px;
+    padding-bottom: 94px;
+
+}
+
+.h2 {
+    font-size: 45px;
+    color: #282828;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-right: 127px;
+    padding-left: 127px;
+    margin-bottom: 1px;
+
+        &::before, &::after{
+            content: ' ';
+            position: absolute;
+            background-image: url(../img/zakaryt.svg);
+            display: block;
+            width: 102px;
+            height: 28px;
+            top: calc(50% - 14px);
+        }
+        &::before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+}
+
+.man{
+    
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0px;
+        
+    }
+    li{
+        text-decoration: none;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        &::before{
+            content: ' ';
+            display: block;
+            width: 2px;
+            height: 16px;
+            background-color: #494949;
+            position: absolute;
+            left: 0px
+        }
+        &:first-child::before{
+            display: none;
+            font-size: 20px;
+        }
+
+        }
+
+        @media screen and (min-width: 400px) {
+            ul {
+            flex-direction: row;
+            min-width: 600px;
+            }
+        }
+        a{
+        text-decoration: none;
+        color: #5b5a5a;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.4s ease;
+            &::after { 
+                content: "";
+                position: absolute;
+                height: 3px;
+                background-color: #ec1919;
+                width: 0px;
+                left: 50%;
+                bottom: -9px;
+                transform: translateX(-50%);
+                transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+            }
+        
+        &:hover { color: #ec1212; }
+        &:hover::after { width: 100%; }
+        }
+    }
+
+
+//!=============================== PAGE END  ===============================// 
+
+//?======================================   ======================================//
+
+//!=============================== BOX START  ===============================// 
+
+
+.box {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.11);
+    display: flex;
+    justify-content: space-between ;
+    margin-bottom: 100px;
+    margin-top: 43px;
+
+    // .box__item
+    &__item {
+    }
+
+    // .box__number
+    &__number {
+        font-family: 'Roboto', sans-serif;
+        font-size: 120px;
+        font-weight: 800;
+        line-height: 0;
+        position: relative;
+        margin-left: 56px;
+        margin-bottom: 70px;
+    
+    }
+
+    // .box__text
+    &__text {
+        margin-left: 56px;
+        
+    }
+
+    // .box__h3
+    &__h3 {
+        font-size: 45px;
+        font-weight: 800;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    // .box__p
+    &__p {
+        font-size: 18px;
+        font-weight: 800;
+        padding-bottom: 59px;
+        
+    }
+
+    // .box__number-1
+    &__number-1 {
+        position: relative;
+        &::after{
+            content: '';
+            background-image: url(../img/Pizza.png);
+            background-repeat: no-repeat;
+            display: block;
+            width: 128px;
+            height: 71px;
+            position: absolute;
+            top: -40px;
+            left: 80px;
+        }
+    }
+
+    // .box__number-2
+    &__number-2 {
+        position: relative;
+        &::after{
+            content: '';
+            background-image: url(../img/Pizza1.png);
+            background-repeat: no-repeat;
+            display: block;
+            width: 184px;
+            height: 81px;
+            position: absolute;
+            top: -40px;
+            left: 80px;
+    }
+    }
+    // .box__number-3
+    &__number-3 {
+        &::after{
+            content: '';
+            background-image: url(../img/silver.png);
+            background-repeat: no-repeat;
+            display: block;
+            width: 142px;
+            height: 68px;
+            position: absolute;
+            top: -40px;
+            left: 80px;
+    }
+    }
+}
+//!=============================== BOX END  ===============================//
+
+//?======================================   ======================================//
+
+//!=============================== CREATE START  ===============================//
+
+.create{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url(../img/BG3.png);
+    background-position: center;
+    text-decoration: none;
+    padding: 35px 0px;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+    transition: .4 s;
+        &:hover{
+            color: #282828;
+            transform: scale(1.05);
+        }
+    
+}
+
+//!=============================== CREATE END  ===============================//
+
+//?======================================   ======================================//
+
+//!=============================== FOOTER START  ===============================//
+
+.footer{
+    background-image: url(../img/PG2.png);
+    padding: 44px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+//!=============================== FOOTER END  ===============================//
